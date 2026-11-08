@@ -1,0 +1,12 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/profile" android:textAppearance="@style/Text.Student.Title" />
+        <ImageView android:id="@+id/avatar" android:layout_width="88dp" android:layout_height="88dp" android:layout_marginTop="24dp" android:background="@drawable/avatar_background" android:clipToOutline="true" android:scaleType="centerCrop" android:src="@drawable/ic_person" android:contentDescription="@string/avatar" />
+        <TextView android:id="@+id/name" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:textAppearance="@style/Text.Student.Title" />
+        <TextView android:id="@+id/details" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:textSize="16sp" android:textColor="@color/text_secondary" android:lineSpacingExtra="8dp" android:textIsSelectable="true" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/changeAvatar" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/change_avatar" android:textColor="@color/neutral" />
+        <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/progress" android:layout_width="match_parent" android:layout_height="wrap_content" android:indeterminate="true" android:visibility="gone" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="Sổ sinh viên · Phiên bản 1.0\nQuản lý hồ sơ sinh viên và chứng chỉ." android:textAppearance="@style/Text.Student.Body" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/logout" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/logout" android:textColor="@color/error" />
+    </LinearLayout>
+</ScrollView>

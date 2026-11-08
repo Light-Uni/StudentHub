@@ -1,0 +1,3 @@
+studentId,fullName,birthDate,gender,email,phone,address,className,major,enrollmentDate,status
+SV101,Nguyễn Khánh Linh,2004-03-18,female,linh@example.test,0901234567,Thành phố Hồ Chí Minh,D22CQCN01,Công nghệ thông tin,2022-09-05,studying
+SV102,Trần Quốc Bảo,2004-11-02,male,bao@example.test,0912345678,Đà Nẵng,D22CQCN02,Công nghệ thông tin,2022-09-05,studying

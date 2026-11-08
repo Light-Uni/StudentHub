@@ -1,0 +1,1 @@
+<resources><style name="Widget.Student.NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator"><item name="android:color">@color/primary_container</item></style></resources>

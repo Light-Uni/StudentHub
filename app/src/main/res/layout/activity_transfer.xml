@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+    <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" app:title="@string/transfer" app:navigationIcon="@drawable/ic_back" app:navigationContentDescription="@string/back" />
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+            <TextView android:id="@+id/scope" android:layout_width="match_parent" android:layout_height="wrap_content" android:textAppearance="@style/Text.Student.Title" />
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/transfer_note" android:textAppearance="@style/Text.Student.Body" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/importFile" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="@string/import_file" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/exportCsv" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/export_csv" android:textColor="@color/neutral" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/exportExcel" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/export_excel" android:textColor="@color/neutral" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/template" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Lưu tệp mẫu CSV" android:textColor="@color/success" />
+            <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/progress" android:layout_width="match_parent" android:layout_height="wrap_content" android:indeterminate="true" android:visibility="gone" />
+            <TextView android:id="@+id/result" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:textAppearance="@style/Text.Student.Body" android:accessibilityLiveRegion="polite" android:textIsSelectable="true" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/confirmImport" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/import_confirm" android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

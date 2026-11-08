@@ -1,0 +1,26 @@
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <TextView android:id="@+id/greeting" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:textAppearance="@style/Text.Student.Body" />
+            <com.google.android.material.imageview.ShapeableImageView android:id="@+id/avatar" android:layout_width="40dp" android:layout_height="40dp" android:scaleType="centerCrop" android:background="@drawable/avatar_background" android:src="@drawable/ic_person" android:contentDescription="@string/avatar" app:shapeAppearanceOverlay="@style/Shape.Student.Avatar" />
+        </LinearLayout>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Hồ sơ học tập" android:textAppearance="@style/Text.Student.Title" />
+        <TextView android:id="@+id/role" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textAppearance="@style/Text.Student.Body" />
+        <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" app:cardBackgroundColor="@color/primary_container" app:strokeWidth="0dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tổng số sinh viên" android:textColor="@color/neutral" android:textSize="14sp" />
+                <TextView android:id="@+id/studentCount" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="—" android:textSize="36sp" android:textColor="@color/neutral" android:fontFeatureSettings="tnum" />
+                <TextView android:id="@+id/studyingCount" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:textAppearance="@style/Text.Student.Body" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/openStudents" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mở danh sách sinh viên" android:textColor="@color/neutral" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <TextView android:id="@+id/certificateCount" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingVertical="16dp" android:text="Chứng chỉ · Đang tải…" android:textSize="16sp" android:textColor="@color/neutral" />
+        <TextView android:id="@+id/userCount" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingBottom="16dp" android:textSize="16sp" android:textColor="@color/neutral" android:visibility="gone" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/addStudent" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/add_student" app:icon="@drawable/ic_add" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/transfer" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/transfer" android:textColor="@color/neutral" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Hồ sơ mới nhất" android:textSize="18sp" android:textColor="@color/neutral" android:textStyle="bold" />
+        <LinearLayout android:id="@+id/recent" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:orientation="vertical" />
+        <TextView android:id="@+id/state" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:textAppearance="@style/Text.Student.Body" android:accessibilityLiveRegion="polite" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/refresh" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Làm mới số liệu" android:textColor="@color/success" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

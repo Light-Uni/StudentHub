@@ -1,0 +1,8 @@
+{
+  "indexes": [
+    { "collectionGroup": "login_history", "queryScope": "COLLECTION", "fields": [
+      {"fieldPath": "userId", "order": "ASCENDING"}, {"fieldPath": "loginAt", "order": "DESCENDING"}
+    ]}
+  ],
+  "fieldOverrides": [{"collectionGroup":"certificates","fieldPath":"name","indexes":[{"order":"ASCENDING","queryScope":"COLLECTION_GROUP"},{"order":"ASCENDING","queryScope":"COLLECTION"},{"order":"DESCENDING","queryScope":"COLLECTION"}]}]
+}

@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:paddingHorizontal="16dp">
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/students" android:textAppearance="@style/Text.Student.Title" android:layout_marginTop="8dp" />
+        <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:hint="@string/search_students" app:endIconMode="clear_text">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/search" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text" android:maxLines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none">
+            <com.google.android.material.chip.ChipGroup android:id="@+id/filters" android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleSelection="true" app:selectionRequired="true" app:singleLine="true">
+                <com.google.android.material.chip.Chip android:id="@+id/filterAll" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/all" android:checked="true" />
+                <com.google.android.material.chip.Chip android:id="@+id/filterStudying" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/studying" />
+                <com.google.android.material.chip.Chip android:id="@+id/filterGraduated" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/graduated" />
+                <com.google.android.material.chip.Chip android:id="@+id/filterPaused" style="@style/Widget.Material3.Chip.Filter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/paused" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+            <TextView android:id="@+id/count" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:textAppearance="@style/Text.Student.Body" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/sort" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="48dp" android:text="@string/sort" android:textColor="@color/neutral" />
+        </LinearLayout>
+        <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/progress" android:layout_width="match_parent" android:layout_height="wrap_content" android:indeterminate="true" />
+        <TextView android:id="@+id/state" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingVertical="24dp" android:textAppearance="@style/Text.Student.Body" android:accessibilityLiveRegion="polite" android:visibility="gone" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/retry" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/retry" android:visibility="gone" />
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:paddingBottom="88dp" android:clipToPadding="false" />
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/add" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="bottom|end" android:layout_margin="24dp" android:src="@drawable/ic_add" android:contentDescription="@string/add_student" app:backgroundTint="@color/primary" />
+</FrameLayout>
